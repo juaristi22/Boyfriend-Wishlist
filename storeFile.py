@@ -7,10 +7,19 @@ def store(wishList):
 
 
 def read():
+    wish_list = {}
+    
     with open("wishlist.txt", "r") as wish_file:
+        
+        n = 1
         for line in wish_file:
             wish = line.strip().split(",")
-            print (wish)
+
+            wish_list[n] = [wish[1], float(wish[2])]
+
+            n += 1
+
+    return wish_list
 
 # example_wishlist = {
 #    1 : ["book", 5.43],
@@ -19,5 +28,5 @@ def read():
 #    4 : ["Alcohol", 11.15]
 #}
 
-read()
+print(read())
 
