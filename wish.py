@@ -1,7 +1,16 @@
-# blah blah blah
-# bu bu bu
+from storeFile import store, read
 
-def print_bla():
-    print ("bla bla bla")
+# add to wish list
 
-print_bla()
+def add(item, price, wishlist = None):
+    if None:
+        wishlist = {}
+
+    n = len(wishlist.items())
+    wishlist[n+1] = [item, price]
+    store(wishlist)
+
+prev_wishlist = read()
+add('ice cream', 5.5, prev_wishlist)
+
+
