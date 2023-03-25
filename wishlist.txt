@@ -1,0 +1,4 @@
+1,book,5.43
+2,glasses,105.43
+3,Box,40
+4,Alcohol,11.15
